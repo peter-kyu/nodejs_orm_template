@@ -7,7 +7,7 @@ database:
   port: 3306
   username: peter
   password: peter
-  default_schema: crawler
+  default_schema: database_name
 
 https:
   use: false
