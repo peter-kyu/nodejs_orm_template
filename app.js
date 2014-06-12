@@ -10,14 +10,12 @@ var express = require('express'),
     path    = require('path'),
     config  = require('config'),
     db      = require('./models');
-//var mysql = require('mysql');
 var app     = express();
 
 // all environments
 app.set('port', config.http.port || 8080);
 app.set('views', path.join(__dirname, 'views'));
 app.set('views options', { layout: false });
-app.set('view engine', 'html');
 app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'jade');
 app.use(connect.favicon());
@@ -25,7 +23,6 @@ app.use(connect.logger('dev'));
 app.use(connect.json());
 app.use(connect.urlencoded());
 app.use(connect.methodOverride());
-app.use(connect.static(path.join(__dirname, 'views')));
 app.use(connect.static(path.join(__dirname, 'public')));
 
 // development only
@@ -63,9 +60,5 @@ db
             }
         }
     });
-
-// for video chat
-var webRTC = require('webrtc.io').listen(app);
-console.log('video chat server linstening on port ' + app.get('port'));
 
 
