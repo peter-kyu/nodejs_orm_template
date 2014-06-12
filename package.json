@@ -1,0 +1,21 @@
+{
+  "name": "homepage",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "*",
+    "jade": "*",
+    "ejs": "*",
+    "mysql": "*",
+    "connect": "*",
+    "lodash": "*",
+    "js-yaml": "*",
+    "config": "*",
+    "sequelize": "*",
+    "ws": "*",
+    "webrtc.io": "*"
+  }
+}

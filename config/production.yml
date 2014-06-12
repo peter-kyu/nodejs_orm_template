@@ -1,0 +1,2 @@
+# it will be read when you export NODE_ENV=productiont
+# the order of loading is config/default.yml -> config/production.yml

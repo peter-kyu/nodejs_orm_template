@@ -1,0 +1,36 @@
+nav(class='navbar navbar-fixed-top navbar-default' role='navigation')
+    div(class='container-fluid')
+        // top navigation
+        div(class='collapse navbar-collapse' id='nav-top')
+
+            // left
+            ul(class='nav navbar-nav')
+                li: a(href='#') Link
+                li: a(href='#') Link2
+                li: form(class='navbar-form' role='search')
+                    div(class='form-group')
+                        input(type='text' class='form-control' placeholder='Query')
+                    span= ' '
+                    button(type='submit' class='btn btn-default') Search
+
+
+
+            // right
+            ul(class='nav navbar-nav navbar-right')
+                li(class='dropdown')
+                    a(href='#' class='dropdown-toggle' data-toggle='dropdown')
+                        i(class='glyphicon glyphicon-user')
+                        i(class='caret')
+                    ul(class='dropdown-menu')
+                        li: a(href='#')
+                            i(class='glyphicon glyphicon-user')
+                            span= ' User Profile'
+                        li.divider
+                        if user
+                            li: a(href='#')
+                                i(class='glyphicon glyphicon-log-out')
+                                span= ' logout'
+                        else
+                            li: a(href='login.html')
+                                i(class='glyphicon glyphicon-log-in')
+                                span= ' login'
